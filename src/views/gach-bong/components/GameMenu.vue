@@ -44,7 +44,7 @@ const emit = defineEmits<{
       </button>
 
       <div class="mt-4 text-xs text-text-dim">
-        Khám phá nhiều hơn tại <a href="https://gachbong.yellowstudio.vn" target="_blank" class="text-accent-amber hover:underline hover:text-yellow-400 transition">gachbong/vn</a>
+        Khám phá nhiều hơn tại <a href="https://gachbong.yellowstudio.vn" target="_blank" rel="noopener noreferrer" class="text-accent-amber hover:underline hover:text-yellow-400 transition">gachbong/vn</a>
       </div>
     </div>
   </div>
