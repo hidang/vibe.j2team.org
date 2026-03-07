@@ -38,7 +38,7 @@ const pray = () => {
   isJackpotShaking.value = false
   
   // Hiệu ứng gõ chữ
-  const targetText = prayers[Math.floor(Math.random() * prayers.length)]
+  const targetText = prayers[Math.floor(Math.random() * prayers.length)] || ""
   let i = 0
   const typeWriter = setInterval(() => {
     currentPrayer.value += targetText.charAt(i)
