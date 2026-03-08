@@ -34,7 +34,15 @@ const pageRoutes: RouteRecordRaw[] = pages.map((page) => {
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  scrollBehavior: () => ({ top: 0 }),
+  scrollBehavior: (_to, _from, savedPosition) => {
+    if (_to.hash) {
+      return { el: _to.hash, behavior: 'smooth' }
+    }
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
