@@ -146,6 +146,7 @@ Before implementing any new feature or sub-page, agents MUST:
 7. **No new dependencies** in `package.json` unless truly needed and approved. The following libraries are **already installed** — use them freely (see "Leveraging Installed Libraries" section above):
    - `@vueuse/core` — Vue composables
    - `@iconify/vue` — Icon component
+
    The following are **pre-approved** and can be added without additional approval:
    - `vue-konva` — 2D canvas library for drawing, games, and interactive graphics
    - `shiki` — Syntax highlighter

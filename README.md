@@ -33,6 +33,7 @@ pnpm dev
 7. **Không thêm dependency mới** trừ khi thật sự cần và được approve. Các thư viện sau đã được **cài sẵn** — tự do sử dụng:
    - `@vueuse/core` — 200+ composables cho Vue
    - `@iconify/vue` — 200,000+ icons từ 150+ bộ icon
+
    Các thư viện sau được **chấp thuận sẵn** và có thể thêm mà không cần approve:
    - `vue-konva` — Thư viện canvas 2D cho vẽ, game, đồ hoạ tương tác
    - `shiki` — Syntax highlighter
