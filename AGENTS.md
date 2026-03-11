@@ -94,6 +94,7 @@ Before implementing any browser/DOM/state logic, **check if VueUse already has a
 - **Viewport**: `useWindowSize()`, `useElementSize()`, `useIntersectionObserver()` — not manual resize/scroll listeners
 - **Media**: `useMediaQuery()` — not `window.matchMedia` directly
 - **Network**: `useFetch()`, `useOnline()` — not raw `fetch` with manual reactive state
+- **Remote scripts**: `useScriptTag()` — not manual `document.createElement('script')`. Auto-cleans up on unmount
 - **Animation**: `useTransition()`, `useRafFn()` — not manual `requestAnimationFrame`
 - **Reactivity**: `watchDebounced()`, `watchThrottled()`, `refDebounced()` — not custom debounce/throttle implementations
 
@@ -156,7 +157,8 @@ Before implementing any new feature or sub-page, agents MUST:
    - `shiki` — Syntax highlighter
 8. **Folder names must be kebab-case** — sub-page directories under `src/views/` must use lowercase kebab-case (e.g., `my-app`, `dev-rpg`). PascalCase or mixed-case folder names are not allowed
 9. **Author attribution required** — every page must have an `author` field in its `meta.ts` file
-9. **No landing pages or promotional content** — Pages must provide direct, self-contained value to users (e.g., a game, tool, interactive experience, or educational content). The following are **not accepted**:
+10. **External libraries & APIs are welcome** — Sub-apps can load third-party JS libraries at runtime via `useScriptTag()` from `@vueuse/core` (e.g., YouTube IFrame API, Tone.js, Matter.js, p5.js). Authors can also call free/public external APIs (e.g., weather, dictionary, trivia, exchange rates) to power their features — just don't hard-code API keys in source code (see rule 8 in PR Checklist)
+11. **No landing pages or promotional content** — Pages must provide direct, self-contained value to users (e.g., a game, tool, interactive experience, or educational content). The following are **not accepted**:
    - Landing pages or showcase pages for external products, services, or brands
    - Pages whose primary purpose is to redirect users to external websites or services
    - Advertising, marketing, or affiliate content
