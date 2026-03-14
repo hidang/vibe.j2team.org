@@ -121,9 +121,9 @@ function applyFilters(pages: PageInfo[]): PageInfo[] {
 function updateProductCount(event: Event) {
   const target = event.target as HTMLInputElement
   productCount.value = Number(target.value)
-  // Reload products immediately when slider changes
   loadPages().then((pages) => {
-    initTiles(pages)
+    const filtered = applyFilters(pages)
+    initTiles(filtered)
   })
 }
 

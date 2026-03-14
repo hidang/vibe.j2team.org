@@ -11,7 +11,7 @@ import {
 } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import BackToTop from '@/components/BackToTop.vue'
-import EasterEgg from './components/EasterEgg.vue'
+import VibeUniverse from './components/VibeUniverse.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -446,7 +446,7 @@ onUnmounted(() => {
     </Teleport>
 
     <!-- Easter Egg: J2TEAM flip animation with fireworks -->
-    <EasterEgg
+    <VibeUniverse
       :show="showEasterEgg"
       @close="handleEasterEggClose"
       @navigate="handleEasterEggNavigate"
